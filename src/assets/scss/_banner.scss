@@ -1,0 +1,47 @@
+.banner {
+    position: relative;
+    margin-bottom: 4rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #222;
+    h1 {
+        color: #fff;
+    }
+    h2 {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+}
+
+.banner__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.banner--home {
+    background-image: url('../img/bg-banner-home.jpg');
+}
+
+.banner__arrow {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+@include media-breakpoint-up(md) {
+    .banner {
+        h1 {
+            font-size: 3.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+}

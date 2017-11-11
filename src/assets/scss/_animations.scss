@@ -1,0 +1,13 @@
+.animation-fadeInOut {
+    -webkit-animation: fadeinout 3s infinite;
+    animation: fadeinout 3s infinite;
+    opacity: 0.3;
+}
+
+@-webkit-keyframes fadeinout {
+  50% { opacity: 0.8; }
+}
+
+@keyframes fadeinout {
+  50% { opacity: 0.8; }
+}
