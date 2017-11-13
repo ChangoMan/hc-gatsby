@@ -10,9 +10,9 @@ class BlogIndex extends React.Component {
 
         return (
             <div>
+
                 <Helmet>
                     <title>{get(this, 'props.data.site.siteMetadata.title')}</title>
-                    <link href="https://file.myfontastic.com/BpzwX4LjHjPM2JxBPqgq4G/icons.css" rel="stylesheet" />
                 </Helmet>
 
                 <div className="banner banner--home">
@@ -30,6 +30,7 @@ class BlogIndex extends React.Component {
                 <div className="container">
 
                     <main>
+
                         {posts.map(post => {
                             if (post.node.path !== '/404/') {
                                 const title = get(post, 'node.frontmatter.title') || post.node.path
@@ -46,24 +47,8 @@ class BlogIndex extends React.Component {
                                 )
                             }
                         })}
+
                     </main>
-
-
-                    {/*<div className="row">
-                        <div className="col-lg-3">
-
-
-                            <aside>
-
-                            </aside>
-
-                        </div>
-                        <div className="col-lg-12">
-
-                        </div>
-
-                    </div>*/}
-
 
                 </div>
             </div>
@@ -89,11 +74,9 @@ export const pageQuery = graphql`
                 node {
                     excerpt
                     frontmatter {
+                        title
                         path
                         date(formatString: "DD MMMM, YYYY")
-                    }
-                    frontmatter {
-                        title
                     }
                 }
             }
