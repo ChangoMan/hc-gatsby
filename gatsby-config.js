@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Hunter Chang",
+    title: "Hunter Chang - Web Developer & Designer",
     author: "Hunter Chang",
+    description: "Hunter Chang is a web developer and designer living in beautiful Colorado."
   },
   pathPrefix: '/',
   plugins: [
