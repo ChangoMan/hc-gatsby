@@ -2,6 +2,7 @@
 title: From Wordpress to Gatsby.js
 date: "2017-11-11"
 path: "/wordpress-to-gatsbyjs/"
+image: "./img/wordpress-gatsbyjs.jpg"
 ---
 
 For the past 8+ years, my go-to weapon of choice when developing a website has been WordPress. According to a [recent statistic by W3Techs](https://w3techs.com/technologies/details/cm-wordpress/all/all), about 29% of all websites on the internet are built using this popular CMS. That's a **HUGE** number, and for pretty good reason. WordPress has an extensive community backing it, with tons of themes and plugins for almost any website you can think of. It's relatively easy to use and best of all, it's free. What's not to like?

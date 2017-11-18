@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import Img from 'gatsby-image'
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -17,8 +18,21 @@ class BlogPostTemplate extends React.Component {
 
                 <div className="container">
                     <h1>{post.frontmatter.title}</h1>
-                    <p className="mb-4"><small>{post.frontmatter.date}</small></p>
-                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <p className="mb-5"><small>{post.frontmatter.date}</small></p>
+                </div>
+
+                <Img className="mb-4" sizes={post.frontmatter.image.childImageSharp.sizes} />
+
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-8">
+                            <div className="pt-5 pb-5" dangerouslySetInnerHTML={{ __html: post.html }} />
+                        </div>
+                        <div className="col-lg-4">
+                            <aside>
+                            </aside>
+                        </div>
+                    </div>
                 </div>
             </main>
         )
@@ -41,6 +55,13 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
+                image {
+                    childImageSharp{
+                        sizes(maxWidth: 800) {
+                            ...GatsbyImageSharpSizes
+                        }
+                    }
+                }
             }
         }
     }

@@ -9,6 +9,8 @@ class BlogIndex extends React.Component {
         const siteTitle = get(this, 'props.data.site.siteMetadata.title')
         const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
+        console.log(posts)
+
         return (
             <div>
 
@@ -38,13 +40,22 @@ class BlogIndex extends React.Component {
                                 const title = get(post, 'node.frontmatter.title') || post.node.path
                                 return (
                                     <article className="post" key={post.node.frontmatter.path}>
-                                        <h2>
-                                            <Link to={post.node.frontmatter.path} >
-                                                {post.node.frontmatter.title}
-                                            </Link>
-                                        </h2>
-                                        <p><small>{post.node.frontmatter.date}</small></p>
-                                        <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                                        <div className="row align-items-center">
+                                            <div className="col-lg-6">
+                                                <Link to={post.node.frontmatter.path} >
+                                                    <Img sizes={post.node.frontmatter.image.childImageSharp.sizes} />
+                                                </Link>
+                                            </div>
+                                            <div className="col-lg-6">
+                                                <h2 className="mt-4 mt-lg-0">
+                                                    <Link to={post.node.frontmatter.path}>
+                                                        {post.node.frontmatter.title}
+                                                    </Link>
+                                                </h2>
+                                                <p className="mb-4"><small>{post.node.frontmatter.date}</small></p>
+                                                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                                            </div>
+                                        </div>
                                     </article>
                                 )
                             }
@@ -57,6 +68,7 @@ class BlogIndex extends React.Component {
                         <div className="row no-gutters align-items-center">
                             <div className="col-lg-6">
                                 <div className="p-5">
+                                    <h2 className="mb-4">About Me</h2>
                                     <p>My name is Hunter Chang and I've been a professional web developer and designer for over 8 years. I graduated in 2008 from the College of Architecture and Planning at the University of Colorado, Boulder. I specialize in front-end development and am currently employed full time at Madwire. Since my time there, I have learned a tremendous amount about web development, SEO, ecommerce, and marketing.</p>
                                     <p>I enjoy web design and development because everyday is a new and fast-paced learning experience with unique challenges to overcome. Outside of work, I dream about seeing the world and experiencing all that it has to offer. I also like photography, snowboarding, boating, and spontaneous adventures.</p>
                                 </div>
@@ -93,17 +105,24 @@ export const pageQuery = graphql`
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
             edges {
                 node {
-                    excerpt
+                    excerpt(pruneLength: 250)
                     frontmatter {
                         title
                         path
                         date(formatString: "DD MMMM, YYYY")
+                        image {
+                            childImageSharp{
+                                sizes(maxWidth: 800) {
+                                    ...GatsbyImageSharpSizes
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
         aboutHunter: imageSharp(id: { regex: "/about-hunter-chang/" }) {
-            sizes(maxWidth: 1200) {
+            sizes(maxWidth: 1100) {
               ...GatsbyImageSharpSizes
             }
         }
