@@ -9,8 +9,6 @@ class BlogIndex extends React.Component {
         const siteTitle = get(this, 'props.data.site.siteMetadata.title')
         const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
-        console.log(posts)
-
         return (
             <div>
 
@@ -64,20 +62,18 @@ class BlogIndex extends React.Component {
                     </div>
 
                     <section className="section section-about">
-
                         <div className="row no-gutters align-items-center">
                             <div className="col-lg-6">
                                 <div className="p-5">
                                     <h2 className="mb-4">About Me</h2>
-                                    <p>My name is Hunter Chang and I've been a professional web developer and designer for over 8 years. I graduated in 2008 from the College of Architecture and Planning at the University of Colorado, Boulder. I specialize in front-end development and am currently employed full time at Madwire. Since my time there, I have learned a tremendous amount about web development, SEO, ecommerce, and marketing.</p>
-                                    <p>I enjoy web design and development because everyday is a new and fast-paced learning experience with unique challenges to overcome. Outside of work, I dream about seeing the world and experiencing all that it has to offer. I also like photography, snowboarding, boating, and spontaneous adventures.</p>
+                                    <p>My name is Hunter Chang and I've been a professional web developer and designer for over 8 years. I graduated in 2008 from the College of Architecture and Planning at the University of Colorado, Boulder. I'm currently working full time as a front end application engineer at Madwire. </p>
+                                    <p>I enjoy web design and development because everyday is a new and fast-paced learning experience with unique challenges to overcome. Outside of work, I dream about seeing the world and experiencing all that it has to offer. My favorite things include traveling, exquisite cuisine, ramen, and Korean pop.</p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <Img sizes={this.props.data.aboutHunter.sizes} />
                             </div>
                         </div>
-
                     </section>
 
                 </main>

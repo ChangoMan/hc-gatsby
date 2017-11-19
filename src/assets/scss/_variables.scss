@@ -1,4 +1,5 @@
-$primary: #c3073f;
+// $primary: #c3073f;
+$primary: #f72060;
 $secondary: #14a098;
 // $secondary: #950740;
 // $tertiart: #14a098;
@@ -78,4 +79,11 @@ $spacers: (
   8: ($spacer * 8)
 ) !default;
 
-$link-hover-color:      lighten($primary, 15%) !default;
+// $link-hover-color:      lighten($primary, 15%) !default;
+
+@mixin transition-all($time) {
+    -webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+}

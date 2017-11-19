@@ -1,0 +1,78 @@
+.nav-mobile {
+    .nav-main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 30px 20px 20px;
+        opacity: 0;
+        z-index: -1;
+        background-color: #191919;
+        @include transition-all(.25s);
+    }
+    .nav-main__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        > li {
+            -moz-transition: -moz-transform .25s ease-in,opacity .5s;
+            -o-transition: -o-transform .25s ease-in,opacity .5s;
+            -webkit-transition: -webkit-transform .25s ease-in,opacity .5s;
+            transition: transform .25s ease-in,opacity .5s;
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            > a {
+                display: block;
+                padding: 8px 5px;
+                color: #ffffff;
+                font-family: 'Lato', sans-serif;
+                font-size: 1.6em;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center;
+
+            }
+        }
+    }
+}
+
+.body.show-nav {
+    .site-header {
+        z-index: 55;
+        background: none;
+        border: none;
+    }
+    .nav-mobile {
+        .nav-main {
+            opacity: 1;
+            z-index: 50;
+        }
+        .nav-main__list {
+            > li {
+                opacity: 1;
+                -moz-transition: -moz-transform .5s,opacity .4s;
+                -o-transition: -o-transform .5s,opacity .4s;
+                -webkit-transition: -webkit-transform .5s,opacity .4s;
+                transition: transform .5s,opacity .4s;
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            @for $i from 1 through 5 {
+                li:nth-child(#{$i}) {
+                    -o-transition-delay: (#{$i*0.02s});
+                    -moz-transition-delay: (#{$i*0.02s});
+                    -webkit-transition-delay: (#{$i*0.02s});
+                    transition-delay: (#{$i*0.02s});
+                }
+            }
+        }
+    }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        background-color: #fff;
+    }
+}

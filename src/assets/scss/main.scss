@@ -1,10 +1,15 @@
 @import "variables.scss";
 
 @import "bootstrap/bootstrap.scss";
-
 @import "global.scss";
+
 @import "banner.scss";
-@import "posts.scss";
 @import "homepage.scss";
+@import "hamburger.scss";
+@import "header.scss";
+@import "posts.scss";
+@import "navigation.scss";
+
+/* Utilities */
 @import "animations.scss";
 @import "utilities.scss";

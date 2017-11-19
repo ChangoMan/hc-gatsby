@@ -25,13 +25,13 @@ class BlogPostTemplate extends React.Component {
 
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8">
+                        <div className="col-lg-12">
                             <div className="pt-5 pb-5" dangerouslySetInnerHTML={{ __html: post.html }} />
                         </div>
-                        <div className="col-lg-4">
+                        {/*<div className="col-lg-4">
                             <aside>
                             </aside>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </main>
