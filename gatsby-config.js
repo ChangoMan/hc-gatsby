@@ -46,6 +46,14 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-12559718-1',
+        // Setting this parameter is optional
+        anonymize: true
+      },
+    }
   ],
 }
