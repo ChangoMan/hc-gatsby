@@ -36,15 +36,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `noto serif\:400,400i,700`,
-          `lato\:300,400,400i,700`
-        ]
-      }
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
