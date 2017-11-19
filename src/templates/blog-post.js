@@ -17,15 +17,19 @@ class BlogPostTemplate extends React.Component {
                 </Helmet>
 
                 <div className="container">
-                    <h1>{post.frontmatter.title}</h1>
-                    <p className="mb-5"><small>{post.frontmatter.date}</small></p>
+                    <div className="row">
+                        <div className="col-lg-8 offset-lg-2">
+                            <h1>{post.frontmatter.title}</h1>
+                            <p className="mb-5"><small>{post.frontmatter.date}</small></p>
+                        </div>
+                    </div>
                 </div>
 
                 <Img className="mb-4" sizes={post.frontmatter.image.childImageSharp.sizes} />
 
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-lg-8 offset-lg-2">
                             <div className="pt-5 pb-5" dangerouslySetInnerHTML={{ __html: post.html }} />
                         </div>
                         {/*<div className="col-lg-4">
