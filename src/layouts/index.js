@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 import '../assets/scss/main.scss'
 
@@ -49,6 +50,8 @@ class Template extends React.Component {
                 <Navigation handleToggleNav={this.toggleNav} />
 
                 {children()}
+
+                <Footer />
             </div>
         )
     }

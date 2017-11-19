@@ -3,11 +3,14 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import ReactDisqusComments from "react-disqus-comments";
 
 class BlogPostTemplate extends React.Component {
     render() {
         const post = this.props.data.markdownRemark
         const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+
+        console.log(post)
 
         return (
             <main className="post-single pt-5">
@@ -30,7 +33,18 @@ class BlogPostTemplate extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
+
                             <div className="pt-5 pb-5" dangerouslySetInnerHTML={{ __html: post.html }} />
+
+                            <div className="mb-5">
+                                <ReactDisqusComments
+                                    shortname="hunter-chang"
+                                    identifier={post.title}
+                                    title={post.frontmatter.title}
+                                    url={"https://hunterchang.com/" + post.frontmatter.path}
+                                />
+                            </div>
+
                         </div>
                         {/*<div className="col-lg-4">
                             <aside>
@@ -38,6 +52,7 @@ class BlogPostTemplate extends React.Component {
                         </div>*/}
                     </div>
                 </div>
+
             </main>
         )
     }
@@ -59,6 +74,7 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
+                path
                 image {
                     childImageSharp{
                         sizes(maxWidth: 800) {
