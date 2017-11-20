@@ -40,16 +40,16 @@ class BlogIndex extends React.Component {
                                     <article className="post" key={post.node.frontmatter.path}>
                                         <div className="row align-items-center">
                                             <div className="col-lg-6">
-                                                <Link to={post.node.frontmatter.path} >
+                                                <Link to={post.node.frontmatter.path} className="u-hover-fade">
                                                     <Img sizes={post.node.frontmatter.image.childImageSharp.sizes} />
                                                 </Link>
                                             </div>
                                             <div className="col-lg-6">
-                                                <h2 className="mt-4 mt-lg-0">
+                                                <h3 className="mt-4 mt-lg-0">
                                                     <Link to={post.node.frontmatter.path}>
                                                         {post.node.frontmatter.title}
                                                     </Link>
-                                                </h2>
+                                                </h3>
                                                 <p className="mb-4"><small>{post.node.frontmatter.date}</small></p>
                                                 <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
                                             </div>
@@ -105,7 +105,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         title
                         path
-                        date(formatString: "DD MMMM, YYYY")
+                        date(formatString: "MMMM DD, YYYY")
                         image {
                             childImageSharp{
                                 sizes(maxWidth: 800) {

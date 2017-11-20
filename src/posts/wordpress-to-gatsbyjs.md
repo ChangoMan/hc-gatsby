@@ -9,7 +9,7 @@ For the past 8+ years, my go-to weapon of choice when developing a website has b
 
 The landscape of today's front end development scene is constantly changing and unfortunately for WordPress, it's no longer the new hotness. Everybody is riding the JavaScript train, with the React.js framework reigning supreme. WordPress is seen by a lot of developers as an old technology (it's been around since 2003), and it's many plugins are plagued by constant security issues. If you're anything like me, you want to stay relevant and work with the newest, coolest technologies. Allow me introduce you to [Gatsby.js](https://www.gatsbyjs.org/).
 
-<h2 class="mt-5 mb-3">About Gatsby.js</h2>
+<h2 class="h3 mt-5 mb-3">About Gatsby.js</h2>
 
 [Gatsby.js](https://www.gatsbyjs.org/) is a static site generator, which means that all the pages and blog posts are generated for you as regular HTML files and you can host them pretty much anywhere! There is no admin interface or user logins to manage. This is unlike WordPress, which requires a server that runs PHP and a MySQL database to house all the pages and posts. You can also server the static files from a content delivery network (CDN) for even better performance.
 

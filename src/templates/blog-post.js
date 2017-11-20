@@ -21,20 +21,13 @@ class BlogPostTemplate extends React.Component {
 
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 offset-lg-2">
-                            <h1>{post.frontmatter.title}</h1>
-                            <p className="mb-5"><small>{post.frontmatter.date}</small></p>
-                        </div>
-                    </div>
-                </div>
+                        <div className="col-lg-10 offset-lg-1">
 
-                <Img className="mb-4" sizes={post.frontmatter.image.childImageSharp.sizes} />
+                            <h1 className="post-title h2">{post.frontmatter.title}</h1>
+                            <p className="mb-4"><small>{post.frontmatter.date}</small></p>
+                            <Img className="mb-5" sizes={post.frontmatter.image.childImageSharp.sizes} />
 
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8 offset-lg-2">
-
-                            <div className="pt-5 pb-5" dangerouslySetInnerHTML={{ __html: post.html }} />
+                            <div className="pb-4" dangerouslySetInnerHTML={{ __html: post.html }} />
 
                             <div className="mb-5">
                                 <ReactDisqusComments
@@ -46,10 +39,6 @@ class BlogPostTemplate extends React.Component {
                             </div>
 
                         </div>
-                        {/*<div className="col-lg-4">
-                            <aside>
-                            </aside>
-                        </div>*/}
                     </div>
                 </div>
 
@@ -77,7 +66,7 @@ export const pageQuery = graphql`
                 path
                 image {
                     childImageSharp{
-                        sizes(maxWidth: 800) {
+                        sizes(maxWidth: 920) {
                             ...GatsbyImageSharpSizes
                         }
                     }
