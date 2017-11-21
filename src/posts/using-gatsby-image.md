@@ -135,16 +135,16 @@ export const pageQuery = graphql`
 
 Now our `one.jpg` should be ready to rock and roll. We can take a look at the data for this image by doing a `console.log(this.props.data)` inside the `render()` function, and you should see something like this:
 
-https://www.screencast.com/t/CjZPd9agWm
+https://i.imgur.com/8bRktxJ.png
 
 Going back up to the top of the page, let's import the `gatsby-image` component:
 
 ```jsx
+...
 import Img from 'gatsby-image'
 
 class BlogIndex extends React.Component {
 ...
-}
 ```
 
 And add the new component right below the existing `<Bio />` component:
