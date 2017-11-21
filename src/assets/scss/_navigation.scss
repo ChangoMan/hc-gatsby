@@ -29,7 +29,7 @@
                 padding: 8px 5px;
                 color: #ffffff;
                 font-family: 'Lato', sans-serif;
-                font-size: 1.6em;
+                font-size: 1.2rem;
                 font-weight: 700;
                 text-transform: uppercase;
                 text-align: center;
@@ -74,5 +74,11 @@
     }
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
         background-color: #fff;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .nav-mobile .nav-main__list > li > a {
+        font-size: 1.6rem;
     }
 }

@@ -17,6 +17,7 @@ class BlogPostTemplate extends React.Component {
                 <Helmet>
                     <title>{`${post.frontmatter.title} | Hunter Chang`}</title>
                     <meta name="author" content="Hunter Chang" />
+                    <meta name="description" content={post.frontmatter.description} />
                 </Helmet>
 
                 <div className="container">
@@ -29,7 +30,9 @@ class BlogPostTemplate extends React.Component {
 
                             <div className="pb-4" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-                            <div className="mb-5">
+                            <hr />
+
+                            <div className="mb-5 mt-5">
                                 <ReactDisqusComments
                                     shortname="hunter-chang"
                                     identifier={post.title}
@@ -64,6 +67,7 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
                 path
+                description
                 image {
                     childImageSharp{
                         sizes(maxWidth: 920) {

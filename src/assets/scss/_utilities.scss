@@ -20,5 +20,15 @@
 }
 
 .u-hover-fade:hover {
-    opacity: 0.85;
+    opacity: 0.75;
+    .gatsby-image-wrapper {
+        opacity: 0.75;
+    }
+}
+
+.link-white {
+    color: #fff;
+}
+.link-white:hover {
+    color: $primary;
 }
