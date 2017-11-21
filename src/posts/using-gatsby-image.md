@@ -1,5 +1,5 @@
 ---
-title: Using Gatsby Image
+title: An Introduction To Using Gatsby Image
 date: "2017-11-19"
 path: "/using-gatsby-image/"
 image: "./img/gatsby-image.jpg"
