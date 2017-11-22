@@ -1,0 +1,9 @@
+.social-icon-link {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 10px;
+    line-height: 1;
+    &:hover {
+        text-decoration: none;
+    }
+}

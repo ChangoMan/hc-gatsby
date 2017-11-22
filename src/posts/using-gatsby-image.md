@@ -11,7 +11,7 @@ With the rise of mobile browsing, the optimization of images on a website is mor
 
 If you haven't already, go through the official [Gatsby.js tutorial](https://www.gatsbyjs.org/tutorial/) first, you'll need to know some of the basics of Gatsby and GraphQL before we get started. Here is a demo of what we'll be building:
 
-<h4 class="mt-4 mb-4"><a href="http://hc-gatsby-image-demo.surge.sh/">Gatsby Image Demo</a></h4>
+<h4 class="mt-4 mb-4"><a href="http://hc-gatsby-image-demo.surge.sh/">Gatsby Image Demo</a> <small>( <a href="https://github.com/ChangoMan/gatsby-image-demo">view source</a> )</small></h4>
 
 Let's start off by installing and running the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog):
 
@@ -246,4 +246,4 @@ return (
 
 If you reload the page, you should see an added "blur up" effect that comes built in with `gatsby-image` which loads a blurry placeholder image before the real one loads. Scroll down the page to see `imageTwo` and `imageThree` lazy load in!
 
-#### [Finished product](http://hc-gatsby-image-demo.surge.sh/)
+<h4><a href="http://hc-gatsby-image-demo.surge.sh/">Finished Product</a> <small>( <a href="https://github.com/ChangoMan/gatsby-image-demo">view source</a> )</small></h4>

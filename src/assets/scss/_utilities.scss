@@ -26,9 +26,9 @@
     }
 }
 
-.link-white {
+.u-link-white {
     color: #fff;
-}
-.link-white:hover {
-    color: $primary;
+    &:hover {
+        color: $primary;
+    }
 }
