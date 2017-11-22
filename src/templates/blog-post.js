@@ -35,7 +35,7 @@ class BlogPostTemplate extends React.Component {
                                     shortname="hunter-chang"
                                     identifier={post.title}
                                     title={post.frontmatter.title}
-                                    url={"https://hunterchang.com/" + post.frontmatter.path}
+                                    url={"https://hunterchang.com" + post.frontmatter.path}
                                 />
                             </div>
 
