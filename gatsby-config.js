@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://hunterchang.com`,
     title: "Hunter Chang - Web Developer & Designer",
     author: "Hunter Chang",
     description: "Hunter Chang is a web developer and designer living in beautiful Colorado."
@@ -39,6 +40,9 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
