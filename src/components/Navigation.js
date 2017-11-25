@@ -6,8 +6,9 @@ const Navigation = (props) => (
         <nav className="nav-main">
             <ul className="nav-main__list">
                 <li><Link to="/" onClick={props.handleToggleNav}>Home</Link></li>
-                <li><Link to="/wordpress-to-gatsbyjs/" onClick={props.handleToggleNav}>From Wordpress to Gatsby.js</Link></li>
+                <li><Link to="/gatsby-featured-images/" onClick={props.handleToggleNav}>Featured Blog Images In Gatsby.js</Link></li>
                 <li><Link to="/using-gatsby-image/" onClick={props.handleToggleNav}>Using Gatsby Image</Link></li>
+                <li><Link to="/wordpress-to-gatsbyjs/" onClick={props.handleToggleNav}>From Wordpress to Gatsby.js</Link></li>
             </ul>
         </nav>
     </div>
