@@ -38,7 +38,7 @@ Going back to the terminal, let's stop the `gatsby develop` and add the `gatsby-
 yarn add gatsby-image
 ```
 
-<h4 class="mb-3">Adding your images folder to gatsby-config.js</h4>
+<h3 class="mt-5 mb-3">Adding your images folder to gatsby-config.js</h3>
 
 Now open up `gatsby-config.js`. Since `gatsby-image` is a React component, we don't need to add it to the config file. However, we do need to set up our `src/images` folder using `gatsby-source-filesystem` so we can use GraphQL to query our images. Look for this object in the config file, in the plugins array:
 
@@ -72,7 +72,7 @@ This is telling Gatsby to look in the `/src/pages` directory for some files, and
 ...
 ```
 
-<h4 class="mb-3">Back into Gatsby</h4>
+<h3 class="mt-5 mb-3">Back into Gatsby</h3>
 
 Let's start up Gatsby again by running `gatsby develop`. The site should look the same as before, but now we can query our new stock images. Open up `/src/pages/index.js` which is the component for the homepage. Scroll to the bottom and you'll see the GraphQL query that's currently being used:
 
@@ -141,7 +141,7 @@ Now our `one.jpg` should be ready to rock and roll. We can take a look at the da
 
 https://i.imgur.com/8bRktxJ.png
 
-<h4 class="mb-3">Importing the gatsby-image component</h4>
+<h3 class="mt-5 mb-3">Importing the gatsby-image component</h3>
 
 Going back up to the top of the page, let's import the `gatsby-image` component:
 
