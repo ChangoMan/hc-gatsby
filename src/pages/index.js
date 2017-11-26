@@ -59,7 +59,24 @@ class BlogIndex extends React.Component {
 
                 </div>
 
-                <section className="section section-about py-5">
+                <section className="section section--shaded py-6">
+                    <div className="container">
+                        <div className="row align-items-center">
+                            <div className="col-lg-6">
+                                <Img sizes={this.props.data.gatsbyTemplate.sizes} />
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="py-4 text-center">
+                                    <h3 className="mb-4">Gatsby Starters and Templates</h3>
+                                    <p className="mb-4">View my collection of website templates for Gatsby.js. Gatsby is a static site generator which uses modern web technologies such as React.js, Webpack, and GraphQL.</p>
+                                    <p><Link to="/gatsby-starters/" className="btn btn-outline-secondary">View Templates</Link></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="section py-6">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
@@ -116,6 +133,11 @@ export const pageQuery = graphql`
             }
         }
         aboutHunter: imageSharp(id: { regex: "/about-hunter-chang/" }) {
+            sizes(maxWidth: 690) {
+              ...GatsbyImageSharpSizes
+            }
+        }
+        gatsbyTemplate: imageSharp(id: { regex: "/gatsby-template/" }) {
             sizes(maxWidth: 690) {
               ...GatsbyImageSharpSizes
             }
