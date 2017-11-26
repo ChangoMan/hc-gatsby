@@ -10,4 +10,9 @@ const Header = (props) => (
     </header>
 )
 
+Header.propTypes = {
+    handleToggleNav: React.PropTypes.func,
+    toggleClass: React.PropTypes.string,
+}
+
 export default Header

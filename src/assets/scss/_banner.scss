@@ -1,12 +1,12 @@
 .banner {
     position: relative;
-    margin-bottom: 4rem;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 1px solid #111;
     h1 {
         color: #fff;
+        line-height: 1.5;
     }
     h2 {
         color: #fff;
@@ -19,13 +19,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
+    min-height: 500px;
     background-color: rgba(0,0,0,0.25);
 }
 
 .banner--home {
+    margin-bottom: 4rem;
     background-image: url(../img/bg-banner-home-min.jpg);
+    .banner__content {
+        height: 100vh;
+    }
+}
+
+.banner--gatsby-starters {
+    background-image: url(../img/bg-banner-gatsby-starters.jpg);
 }
 
 .banner__arrow {
@@ -37,11 +45,13 @@
 
 @include media-breakpoint-up(md) {
     .banner {
-        h1 {
-            font-size: 3.5rem;
-        }
         h2 {
             font-size: 1.8rem;
+        }
+    }
+    .banner--home {
+        h1 {
+            font-size: 3.5rem;
         }
     }
 }

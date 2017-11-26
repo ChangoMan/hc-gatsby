@@ -11,7 +11,7 @@ class BlogPostTemplate extends React.Component {
         const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
         return (
-            <main className="post-single pt-5">
+            <div className="post-single pt-5">
                 <Helmet>
                     <title>{`${post.frontmatter.title} | Hunter Chang`}</title>
                     <meta name="author" content="Hunter Chang" />
@@ -43,7 +43,7 @@ class BlogPostTemplate extends React.Component {
                     </div>
                 </div>
 
-            </main>
+            </div>
         )
     }
 }

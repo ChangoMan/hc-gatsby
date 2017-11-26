@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
@@ -48,8 +47,9 @@ class Template extends React.Component {
 
                 <Header handleToggleNav={this.toggleNav} toggleClass={toggleClass} />
                 <Navigation handleToggleNav={this.toggleNav} />
-
-                {children()}
+                <main>
+                    {children()}
+                </main>
 
                 <Footer />
             </div>
