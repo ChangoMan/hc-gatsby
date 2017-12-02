@@ -36,6 +36,24 @@ class GatsbyStarters extends React.Component {
                     </div>
                 </div>
 
+                <div className="container-fluid" style={{padding: '20px'}}>
+                    <div className="row align-items-center">
+                        <div className="col-md-6 order-md-2">
+                            <div className="p-5 text-center">
+                                <h2 className="mb-4">Gatsby Forty</h2>
+                                <p className="lead-lg mb-4">A colorful website template featuring a landing page, two hero banner styles, and a generic page. Built using Gatsby.js and designed by <a href="https://html5up.net/forty">HTML5 UP</a>.</p>
+                                <p>
+                                    <a href="http://gatsby-forty.surge.sh/" title="Preview Template" className="social-icon-link u-link-white" target="blank"><span className="fi-monitor"></span></a>
+                                    <a href="https://github.com/ChangoMan/gatsby-starter-forty" title="View code on Github" className="social-icon-link u-link-white" target="blank"><span className="fi-social-github"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-6 order-md-1">
+                            <Img sizes={this.props.data.gatsbyForty.sizes} />
+                        </div>
+                    </div>
+                </div>
+
             </div>
         )
     }
@@ -46,6 +64,11 @@ export default GatsbyStarters
 export const pageQuery = graphql`
     query GatsbyStartersQuery {
         gatsbyDimension: imageSharp(id: { regex: "/template-gatsby-dimension/" }) {
+            sizes(maxWidth: 1200) {
+              ...GatsbyImageSharpSizes
+            }
+        }
+        gatsbyForty: imageSharp(id: { regex: "/template-gatsby-forty/" }) {
             sizes(maxWidth: 1200) {
               ...GatsbyImageSharpSizes
             }
