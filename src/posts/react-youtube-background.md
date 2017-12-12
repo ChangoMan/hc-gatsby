@@ -6,7 +6,7 @@ image: "./img/react-youtube.jpg"
 description: "Static website using Gatsby.js and React, using a YouTube video as the background."
 ---
 
-The first time I saw a video background on a website, I became obsessed. I thought parallax backgrounds were cool, but this was on a different level! Most video backgrounds use the `<video>` tag, paired with a small video file that's optimized for the web. With some CSS, you can set the looping video as a background. There are some sites that offer free video backgrounds for download, such as https://coverr.co/.
+The first time I saw a video background on a website, I became obsessed. I thought parallax backgrounds were cool, but this was on a different level! Most video backgrounds use the video tag, paired with a small video file that's optimized for the web. With some CSS, you can set the looping video as a background. There are some sites that offer free video backgrounds for download, such as https://coverr.co/.
 
 Eventually, I stumbled upon a [jQuery plugin](https://github.com/pupunzi/jquery.mb.YTPlayer) that converts a YouTube video into a background. The plugin takes in a YouTube video id and sets the background for you, using an `<iframe>` instead of the `<video>` tag. I had experimented with this plugin on previous sites, but was curious if it can be re-created using Gatsby.js and React.
 
