@@ -105,7 +105,7 @@ The `<YouTube>` component needs a `videoId` and a set of options, which I've def
 
 That's pretty much it! We'll need to add some CSS to make the resulting `<iframe>` cover the entire background.
 
-Create a new sass file at `/src/assets/scss/_video.scss` with the following:
+Create a new Sass file at `/src/assets/scss/_video.scss` with the following:
 
 ```scss
 .video-background {
@@ -146,6 +146,6 @@ Create a new sass file at `/src/assets/scss/_video.scss` with the following:
 }
 ```
 
-You can obviously adjust any of the CSS for the video background, as well as any of the options that go into `<YouTube>`. You could also create an array of video ids or a playlist, and play a random video each time the site loads. Here's a branch I made that implements a random video: https://github.com/ChangoMan/react-videobg-demo/tree/random-video
+Make sure to import this into the main Sass file at `/src/assets/scss/main.scss`. You can obviously adjust any of the CSS for the video background, as well as any of the options that go into `<YouTube>`. You could also create an array of video ids or a playlist, and play a random video each time the site loads. Here's a branch I made that implements a random video: https://github.com/ChangoMan/react-videobg-demo/tree/random-video
 
 <h4><a href="http://hc-gatsby-videobg.surge.sh/">Finished Product</a> <small>( <a href="https://github.com/ChangoMan/react-videobg-demo">view source</a> )</small></h4>
