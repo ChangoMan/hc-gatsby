@@ -11,7 +11,7 @@ class BlogPostTemplate extends React.Component {
         const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
         return (
-            <div className="post-single pt-5">
+            <article className="post-single pt-5" itemScope itemType="http://schema.org/Article">
                 <Helmet>
                     <title>{`${post.frontmatter.title} | Hunter Chang`}</title>
                     <meta name="author" content="Hunter Chang" />
@@ -22,8 +22,8 @@ class BlogPostTemplate extends React.Component {
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
 
-                            <h1 className="post-title h2">{post.frontmatter.title}</h1>
-                            <p className="mb-4"><small>{post.frontmatter.date}</small></p>
+                            <h1 className="post-title h2" itemProp="name headline">{post.frontmatter.title}</h1>
+                            <p className="mb-4"><small itemProp="datePublished">{post.frontmatter.date}</small></p>
                             <Img className="mb-5" sizes={post.frontmatter.image.childImageSharp.sizes} />
 
                             <div className="pb-4" dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -42,8 +42,8 @@ class BlogPostTemplate extends React.Component {
                         </div>
                     </div>
                 </div>
-
-            </div>
+                <meta itemProp="author" content="Hunter Chang" />
+            </article>
         )
     }
 }

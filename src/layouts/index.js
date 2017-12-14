@@ -39,7 +39,7 @@ class Template extends React.Component {
         }
 
         return (
-            <div className={'body' + bodyClass + toggleClass}>
+            <div className={'body' + bodyClass + toggleClass} itemScope itemType="http://schema.org/WebPage">
 
                 <Helmet>
                     <link href="https://file.myfontastic.com/BpzwX4LjHjPM2JxBPqgq4G/icons.css" rel="stylesheet" />
@@ -47,7 +47,7 @@ class Template extends React.Component {
 
                 <Header handleToggleNav={this.toggleNav} toggleClass={toggleClass} />
                 <Navigation handleToggleNav={this.toggleNav} />
-                <main>
+                <main itemScope itemProp="mainContentOfPage">
                     {children()}
                 </main>
 

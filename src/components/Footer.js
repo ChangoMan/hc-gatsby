@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Footer = (props) => (
-    <footer className="site-footer pt-2 pb-2" style={{borderTop: '1px solid #222'}}>
+    <footer className="site-footer pt-2 pb-2" style={{borderTop: '1px solid #222'}} itemScope itemType="http://schema.org/WPFooter">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-md-6 text-center text-lg-left">

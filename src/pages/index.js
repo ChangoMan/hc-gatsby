@@ -35,7 +35,7 @@ class BlogIndex extends React.Component {
                         if (post.node.path !== '/404/') {
                             const title = get(post, 'node.frontmatter.title') || post.node.path
                             return (
-                                <article className="post" key={post.node.frontmatter.path}>
+                                <article className="post" key={post.node.frontmatter.path} itemScope itemType="http://schema.org/Article">
                                     <div className="row align-items-center">
                                         <div className="col-lg-6">
                                             <Link to={post.node.frontmatter.path} className="u-hover-fade">
@@ -43,15 +43,16 @@ class BlogIndex extends React.Component {
                                             </Link>
                                         </div>
                                         <div className="col-lg-6">
-                                            <h3 className="mt-4 mt-lg-0">
+                                            <h3 className="mt-4 mt-lg-0" itemProp="name headline">
                                                 <Link to={post.node.frontmatter.path}>
                                                     {post.node.frontmatter.title}
                                                 </Link>
                                             </h3>
-                                            <p className="mb-4"><small>{post.node.frontmatter.date}</small></p>
+                                            <p className="mb-4"><small itemProp="datePublished">{post.node.frontmatter.date}</small></p>
                                             <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
                                         </div>
                                     </div>
+                                    <meta itemProp="author" content="Hunter Chang" />
                                 </article>
                             )
                         }
