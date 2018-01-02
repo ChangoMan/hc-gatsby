@@ -15,7 +15,7 @@ Start by installing the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby
 ```bash
 gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog
 cd gatsby-blog
-gatsby-develop
+gatsby develop
 ```
 
 Open up your browser and head to  `http://localhost:8000/` to see the starter Gatsby site. You can see three blog posts on the homepage, but no images are associated with them. Let's fix that!
