@@ -54,6 +54,24 @@ class GatsbyStarters extends React.Component {
                     </div>
                 </div>
 
+                <div className="container-fluid" style={{padding: '20px'}}>
+                    <div className="row align-items-center">
+                        <div className="col-md-6">
+                            <div className="p-5 text-center">
+                                <h2 className="mb-4">Gatsby Strata</h2>
+                                <p className="lead-lg mb-4">This super simple site features a lightbox style photo gallery. Fully responsive and perfect for displaying your work. Designed by <a href="https://html5up.net/strata">HTML5 UP</a>.</p>
+                                <p>
+                                    <a href="http://gatsby-strata.surge.sh/" title="Preview Template" className="social-icon-link u-link-white" target="blank"><span className="fi-monitor"></span></a>
+                                    <a href="https://github.com/ChangoMan/gatsby-starter-strata" title="View code on Github" className="social-icon-link u-link-white" target="blank"><span className="fi-social-github"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <Img sizes={this.props.data.gatsbyStrata.sizes} />
+                        </div>
+                    </div>
+                </div>
+
             </div>
         )
     }
@@ -69,6 +87,11 @@ export const pageQuery = graphql`
             }
         }
         gatsbyForty: imageSharp(id: { regex: "/template-gatsby-forty/" }) {
+            sizes(maxWidth: 1200) {
+              ...GatsbyImageSharpSizes
+            }
+        }
+        gatsbyStrata: imageSharp(id: { regex: "/template-gatsby-strata/" }) {
             sizes(maxWidth: 1200) {
               ...GatsbyImageSharpSizes
             }
