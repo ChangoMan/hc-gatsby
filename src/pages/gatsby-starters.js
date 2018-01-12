@@ -2,6 +2,33 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 
+import SubscribeForm from '../components/SubscribeForm'
+
+const formProps = {
+    action: 'https://hunterchang.us17.list-manage.com/subscribe/post?u=d8b54a1bbe98f0c81add64e56&amp;id=bbf0c0ef12',
+    messages: {
+        inputPlaceholder: "Email Address",
+        btnLabel: "Subscribe",
+        sending: "Working...",
+        success: "Please check your email to complete the subscription process. Thank you!",
+        error: "Please enter a valid email address."
+    },
+    styles: {
+        sending: {
+            fontSize: 14,
+            color: "auto"
+        },
+        success: {
+            fontSize: 14,
+            color: "green"
+        },
+        error: {
+            fontSize: 14,
+            color: "red"
+        }
+    }
+}
+
 class GatsbyStarters extends React.Component {
     render() {
 
@@ -71,6 +98,14 @@ class GatsbyStarters extends React.Component {
                         </div>
                     </div>
                 </div>
+
+                <div className="container-fluid newsletter text-center" style={{padding: '20px'}}>
+                    <div className="container">
+                        <p>Sign up and receive an email alert when the next Gatsby Starter is released!</p>
+                        <SubscribeForm {...formProps}/>
+                    </div>
+                </div>
+
 
             </div>
         )
