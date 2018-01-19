@@ -38,6 +38,8 @@ Going back to the terminal, let's stop the `gatsby develop` and add the `gatsby-
 yarn add gatsby-image
 ```
 
+If you didn't use the gatsby-starter-blog mentioned above, you may need to include gatsby-transformer-sharp and gatsby-plugin-sharp as well, and make sure they are installed and included in your gatsby-config.
+
 <h3 class="mt-5 mb-3">Adding your images folder to gatsby-config.js</h3>
 
 Now open up `gatsby-config.js`. Since `gatsby-image` is a React component, we don't need to add it to the config file. However, we do need to set up our `src/images` folder using `gatsby-source-filesystem` so we can use GraphQL to query our images. Look for this object in the config file, in the plugins array:
