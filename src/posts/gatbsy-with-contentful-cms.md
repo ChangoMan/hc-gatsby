@@ -1,9 +1,9 @@
 ---
-title: Gatsby.js and Contentful Demo Site
+title: Gatsby.js with Contentful Content Management
 date: "2018-01-20"
 path: "/gatsby-with-contentful-cms/"
 image: "./img/gatsby-contentful.jpg"
-description: "Blog site using Gatsby.js as the front-end and Contentful as the back-end CMS. A super fast and modern React website example."
+description: "Blog site using Gatsby.js as the front-end and Contentful as the content management system. A super fast and modern React website example."
 ---
 
 One of the most magical aspects of Gatsby.js is its ability to pull in data from a wide variety of sources. Leveraging the power of GraphQL, you can populate a Gatsby website with local markdown files, a CSV file, a MongoDB database, or from a list of popular content management systems (CMS). This means that if you have a Wordpress site, you can use Gatsby to pull in your posts and pages, and create a modern static website with a React front-end.
