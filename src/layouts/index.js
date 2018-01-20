@@ -46,7 +46,7 @@ class Template extends React.Component {
                 </Helmet>
 
                 <Header handleToggleNav={this.toggleNav} toggleClass={toggleClass} />
-                <Navigation handleToggleNav={this.toggleNav} />
+                <Navigation handleToggleNav={this.toggleNav} data={this.props.data} />
                 <main itemScope itemProp="mainContentOfPage">
                     {children()}
                 </main>
@@ -64,3 +64,18 @@ Template.propTypes = {
 }
 
 export default Template
+
+export const navQuery = graphql`
+    query NavQuery {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        path
+                    }
+                }
+            }
+        }
+    }
+`
