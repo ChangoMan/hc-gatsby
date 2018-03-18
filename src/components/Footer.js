@@ -6,7 +6,7 @@ const Footer = (props) => (
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-md-6 text-center text-lg-left">
-                    <p className="mt-3"><Link to="/" className="u-link-white">&copy; 2017 Hunter Chang</Link></p>
+                    <p className="mt-3"><Link to="/" className="u-link-white">&copy; 2018 Hunter Chang</Link></p>
                 </div>
                 <div className="col-md-6 text-center text-lg-right">
                     <p className="mt-md-3">
