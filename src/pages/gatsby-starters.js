@@ -99,6 +99,24 @@ class GatsbyStarters extends React.Component {
                     </div>
                 </div>
 
+                <div className="container-fluid" style={{padding: '20px'}}>
+                    <div className="row align-items-center">
+                        <div className="col-md-6 order-md-2">
+                            <div className="p-5 text-center">
+                                <h2 className="mb-4">Gatsby Stellar</h2>
+                                <p className="lead-lg mb-4">A scroll friendly, responsive site. Supports single or multiple pages. Has smooth scrolling to the different sections of the page. Designed by <a href="https://html5up.net/stellar">HTML5 UP</a>.</p>
+                                <p>
+                                    <a href="http://gatsby-stellar.surge.sh/" title="Preview Template" className="social-icon-link u-link-white" target="blank"><span className="fi-monitor"></span></a>
+                                    <a href="https://github.com/ChangoMan/gatsby-starter-stellar" title="View code on Github" className="social-icon-link u-link-white" target="blank"><span className="fi-social-github"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-6 order-md-1">
+                            <Img sizes={this.props.data.gatsbyStellar.sizes} />
+                        </div>
+                    </div>
+                </div>
+
                 <div className="container-fluid newsletter text-center" style={{padding: '20px'}}>
                     <div className="container">
                         <p>Sign up and receive an email alert when the next Gatsby Starter is released!</p>
@@ -127,6 +145,11 @@ export const pageQuery = graphql`
             }
         }
         gatsbyStrata: imageSharp(id: { regex: "/template-gatsby-strata/" }) {
+            sizes(maxWidth: 1200) {
+              ...GatsbyImageSharpSizes
+            }
+        }
+        gatsbyStellar: imageSharp(id: { regex: "/template-gatsby-stellar/" }) {
             sizes(maxWidth: 1200) {
               ...GatsbyImageSharpSizes
             }
