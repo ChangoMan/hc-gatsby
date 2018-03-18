@@ -107,7 +107,7 @@ class GatsbyStarters extends React.Component {
                                 <p className="lead-lg mb-4">A scroll friendly, responsive site. Supports single or multiple pages. Has smooth scrolling to the different sections of the page. Designed by <a href="https://html5up.net/stellar">HTML5 UP</a>.</p>
                                 <p>
                                     <a href="http://gatsby-stellar.surge.sh/" title="Preview Template" className="social-icon-link u-link-white" target="blank"><span className="fi-monitor"></span></a>
-                                    <a href="https://github.com/ChangoMan/gatsby-starter-stellar" title="View code on Github" className="social-icon-link u-link-white" target="blank"><span className="fi-social-github"></span></a>
+                                    <a href="https://github.com/codebushi/gatsby-starter-stellar" title="View code on Github" className="social-icon-link u-link-white" target="blank"><span className="fi-social-github"></span></a>
                                 </p>
                             </div>
                         </div>
