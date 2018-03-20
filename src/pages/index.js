@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
                     <meta name="description" content={get(this, 'props.data.site.siteMetadata.description')} />
                 </Helmet>
 
-                <div className="banner banner--home">
+                <div className="banner banner--home mb-0">
                     <div className="banner__content text-center">
                         <div className="pb-8">
                             <h1 className="text-uppercase mb-3"><strong>Hunter Chang</strong></h1>
@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
                     </div>
                 </div>
 
-                <div className="container">
+                {/*<div className="container">
 
                     {posts.map(post => {
                         if (post.node.path !== '/404/') {
@@ -58,7 +58,7 @@ class BlogIndex extends React.Component {
                         }
                     })}
 
-                </div>
+                </div>*/}
 
                 <section className="section section--shaded py-6">
                     <div className="container">
@@ -112,25 +112,6 @@ export const pageQuery = graphql`
                 title
                 author
                 description
-            }
-        }
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-            edges {
-                node {
-                    excerpt(pruneLength: 250)
-                    frontmatter {
-                        title
-                        path
-                        date(formatString: "MMMM DD, YYYY")
-                        image {
-                            childImageSharp{
-                                sizes(maxWidth: 800) {
-                                    ...GatsbyImageSharpSizes
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
         aboutHunter: imageSharp(id: { regex: "/about-hunter-chang/" }) {
